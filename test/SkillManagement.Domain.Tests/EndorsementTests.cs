@@ -16,7 +16,8 @@ namespace SkillManagement.Domain.Tests
             assertion.Verify(typeof(Endorsement).GetConstructors());
         }
 
-        [Theory, AutoData]
+        [Theory]
+        [AutoData]
         public void GivenValidParameters_EndorsementIsCreatedSuccessfully(
             Person endorser,
             Person endorsee,

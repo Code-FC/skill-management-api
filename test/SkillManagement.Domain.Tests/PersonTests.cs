@@ -43,7 +43,8 @@ namespace SkillManagement.Domain.Tests
             action.Should().ThrowExactly<ArgumentNullException>();
         }
 
-        [Theory, AutoData]
+        [Theory]
+        [AutoData]
         public void GivenValidParameters_PersonIsCreatedSuccessfully(string name, string email)
         {
             var person = new Person(email, name);
