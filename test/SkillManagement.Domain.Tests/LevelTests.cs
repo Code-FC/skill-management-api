@@ -20,7 +20,7 @@ namespace SkillManagement.Domain.Tests
         [AutoData]
         public void GivenTitleIsNull_ThrowArgumentNullException(int anyWeight)
         {
-            Action action = () => _ = new Level(anyWeight, null);
+            Action action = () => _ = new Level(anyWeight, null!);
 
             action.Should().ThrowExactly<ArgumentNullException>();
         }

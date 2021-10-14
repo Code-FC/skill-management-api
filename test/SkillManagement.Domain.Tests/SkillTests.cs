@@ -11,7 +11,7 @@ namespace SkillManagement.Domain.Tests
         [AutoData]
         public void GivenTitleIsNull_ThrowsArgumentNullException(string anyDescription)
         {
-            Action action = () => _ = new Skill(null, anyDescription);
+            Action action = () => _ = new Skill(null!, anyDescription);
 
             action.Should().ThrowExactly<ArgumentNullException>().And.ParamName.Should().Be("title");
         }
