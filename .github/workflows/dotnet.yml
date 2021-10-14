@@ -11,7 +11,7 @@ env:
   TEST_PROJECT: "./test/SkillManagement.Domain.Tests"
 jobs:
   CI:
-    name: "Continuous Intetration"
+    name: "Continuous Integration"
     runs-on: ubuntu-latest
 
     steps:
