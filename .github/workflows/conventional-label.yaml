@@ -1,0 +1,14 @@
+# This is a basic workflow to help you get started with Actions
+
+name: "Conventional Labels"
+
+on:
+  pull_request_target:
+    types: [ opened, edited ]
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: bcoe/conventional-release-labels@v1
+        with:
+          type_labels: '{"feat": "feature", "fix": "fix", "breaking": "breaking", "ci": "Continuous integration"}'
